@@ -13,22 +13,22 @@ std::string Armor::toString(){
 }
 
 void Armor::showAtribute(){
-	std::cout << "== 物品表 ==" << std::endl;
-	std::cout << "||名字: " << name << std::endl;
-	std::cout << "||类别: " << type << std::endl;
-	std::cout << "||防御: " << toString() << std::endl;
-	std::cout << "||等级: " << level << std::endl;
-	std::cout << "||稀有度: " << rarity << std::endl;
+	std::cout << "== 物品表 ==" << std::endl; //Item table
+	std::cout << "||名字: " << name << std::endl; //name: 
+	std::cout << "||类别: " << type << std::endl; //Category: 
+	std::cout << "||防御: " << toString() << std::endl; //Defense:
+	std::cout << "||等级: " << level << std::endl; //Level: 
+	std::cout << "||稀有度: " << rarity << std::endl; //Rarity: 
     cout << description << endl;
     cout << "-----------------" << endl;
 }
 
 void Armor::interact(){
-    // 好像没什么必要
-    cout << "其名为" << name << ", 是:" << type << endl;
+    // 好像没什么必要  //It doesn't seem necessary
+    cout << "其名为" << name << ", 是:" << type << endl; //its name - yes:
     cout << description << endl;
-    cout << "请输入想做的动作:\n";
-    std::cout << "-1: 退出 0: 查看"<< std::endl;
+    cout << "请输入想做的动作:\n"; //"Please enter the action you want to do:
+    std::cout << "-1: 退出 0: 查看"<< std::endl; // "-1: Exit 0: View"
     cout << "--------------------\n";
     int cho;
     while(std::cin >> cho){
