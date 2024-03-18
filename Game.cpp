@@ -22,11 +22,11 @@ void Game::initGame()
 
 
 	std::cout << "==============" << std::endl;
-	std::cout << "0: 创建角色" << std::endl;
-	std::cout << "-1: 退出游戏" << std::endl;
+	std::cout << "0: 创建角色" << std::endl; //Creating a Role
+	std::cout << "-1: 退出游戏" << std::endl; //exit the game
 
 	std::cout << std::endl
-			  << "你打算怎么做？ ";
+			  << "你打算怎么做？ "; //what are you going to do
 	std::cin >> choice;
 	switch (choice)
 	{
@@ -37,7 +37,7 @@ void Game::initGame()
 	case (-1):
 		isPlaying = 0;
 		std::cout << std::endl
-				  << "你可以离开游戏，但你无法逃离末世" << std::endl;
+				  << "你可以离开游戏，但你无法逃离末世" << std::endl; //You can leave the game, but you can't escape the apocalypse
 		break;
 	default:
 		break;
@@ -50,22 +50,22 @@ void Game::startMenu()
 	int random = rand() % 3 + 1;
 	switch(random){
 		case(1): 
-			std::cout << "努力活下来，并变得更强!" << std::endl;
+			std::cout << "努力活下来，并变得更强!" << std::endl; //Try to survive and become stronger
 			break;
 		case(2):
-			std::cout << "我猜你活不了多久!" << std::endl;
+			std::cout << "我猜你活不了多久!" << std::endl; //I guess you won't live long
 			break;
 		case(3):
-			std::cout << "快去冒险吧!" << std::endl;
+			std::cout << "快去冒险吧!" << std::endl; //Go on an adventure
 			break;
 		default:
 			break;
 		}
 	
-	std::cout << "0: 开始游戏" << std::endl;
-	std::cout << "1: 退出游戏" << std::endl;
+	std::cout << "0: 开始游戏" << std::endl; //Start game
+	std::cout << "1: 退出游戏" << std::endl; //exit the game
 	std::cout << std::endl
-			  << "你打算怎么做？ ";
+			  << "你打算怎么做？ "; //what are you going to do?
 	std::cin >> choice;
 	switch (choice)
 	{
@@ -76,7 +76,7 @@ void Game::startMenu()
 	case (1):
 		isPlaying = false;
 		std::cout << std::endl
-				  << "你可以离开游戏，但你无法逃离末世" << std::endl;
+				  << "你可以离开游戏，但你无法逃离末世" << std::endl; //You can leave the game, but you can't escape the apocalypse
 		break;
 	default:
 		break;
@@ -85,12 +85,12 @@ void Game::startMenu()
 void Game::mainMenu()
 {
 	
-	std::cout << "0: 看看自己" << std::endl;
-	std::cout << "1: 创建新角色" << std::endl;
-	std::cout << "2: 出去走走" << std::endl;
-	std::cout << "-1: 退出游戏" << std::endl;
+	std::cout << "0: 看看自己" << std::endl; // look at yourself
+	std::cout << "1: 创建新角色" << std::endl; //Create new role
+	std::cout << "2: 出去走走" << std::endl; //go out for a walk
+	std::cout << "-1: 退出游戏" << std::endl; //exit the game
 	std::cout << std::endl
-			  << "你打算怎么做？ ";
+			  << "你打算怎么做？ "; //what are you going to do?
 	std::cin >> choice;
 
 	
@@ -102,7 +102,7 @@ void Game::mainMenu()
 	case (-1):
 		isPlaying = 0;
 		std::cout << std::endl
-				  << "你可以离开游戏，但你无法逃离末世" << std::endl;
+				  << "你可以离开游戏，但你无法逃离末世" << std::endl; //You can leave the game, but you can't escape the apocalypse
 		break;
 	case (1):
 		createCharacter();
@@ -124,7 +124,7 @@ void Game::createCharacter()
 {
 	std::string name = "";
 	Character newcharacter;
-	std::cout << "你叫什么名字？ ";
+	std::cout << "你叫什么名字？ "; //May I have your name
 	std::cin.ignore();
 	std::getline(std::cin, name);
 
@@ -158,23 +158,23 @@ std::vector<std::string> Game::split(std::string &str, char c)
 void Game::play(){
 	// isplaying = 0 for quit
 
-	cout << "初始化中\n";
+	cout << "初始化中\n"; //Initializing
 	cout << "-----------------------------------\n";
 	Character p1;
     p1.initialize("Tom");
 
-    Scene mainCity("主城", "这里是玩家主城，人来人往，车水马龙。");
-    Scene weaponStore("武器店", "武器店里，大胡子老板正盯着你。");
-    Scene supermarket("超市", "进入超市，里面的商品屈指可数。");
-    Scene adventure("试炼", "里面的温度令人胆寒。");
-	Scene hotel("汽车旅馆", "破旧的汽车旅馆，但终于可以睡一觉了。");
+    Scene mainCity("主城", "这里是玩家主城，人来人往，车水马龙。"); //Main City", "This is the player's main city, with people coming and going, and lots of traffic.
+    Scene weaponStore("武器店", "武器店里，大胡子老板正盯着你。"); //Weapon Shop", "In the weapon shop, the bearded boss is staring at you
+    Scene supermarket("超市", "进入超市，里面的商品屈指可数。"); //Supermarket", "When you enter the supermarket, there are only a handful of products inside.
+    Scene adventure("试炼", "里面的温度令人胆寒。"); //Trial", "The temperature inside is chilling
+	Scene hotel("汽车旅馆", "破旧的汽车旅馆，但终于可以睡一觉了。"); //"Motel", "Dirty motel, but finally a good place to get some sleep.
     mainCity.insertPlace(&weaponStore);
     mainCity.insertPlace(&supermarket);
     mainCity.insertPlace(&adventure);
 	mainCity.insertPlace(&hotel);
 
     // name, hp, damage, defence, exp, money, propmt
-    Trader t0(&p1, "恺神", 10000, 10000, 10000, 10000, 10000, "听其他人说他是个语言大师，不论从哪个角度来说。");
+    Trader t0(&p1, "恺神", 10000, 10000, 10000, 10000, 10000, "听其他人说他是个语言大师，不论从哪个角度来说。"); //Kai Shen I heard other people say that he is a master of language, no matter from which point of view
     Trader t1(&p1, "刘老板", 100, 30, 20, 700, 500, "感觉他英语不太好的样子。");
     Trader t2(&p1, "邱总", 80, 40, 14, 600, 700, "他看上去贼眉鼠眼的，眼神中总有一抹贪婪。");
 	Trader t3(&p1, "旅店老板娘", 80, 40, 14, 600, 700, "老板娘，麻烦给我一个好房间。");
