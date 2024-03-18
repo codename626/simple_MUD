@@ -30,9 +30,9 @@ public:
 	void changeMoney(const int num){
 		money += num;
 		if(money < 0){
-			cout << "你的剩余余额为" << money << endl;
-			cout << "你破产了。\n";
-			cout << "你的背包被催债人搜刮一空，你也被人打了一顿。\n";
+			cout << "你的剩余余额为" << money << endl; //"Your remaining balance is"
+			cout << "你破产了。\n"; //You are bankrupt.
+			cout << "你的背包被催债人搜刮一空，你也被人打了一顿。\n"; //Your backpack was ransacked by debt collectors and you were beaten.
 			money = 0;
 			clear();
 			changeHp(-10);
@@ -81,9 +81,9 @@ public:
 	void changeHp(const int num){
 		hp += num;
 		if(hp < 0){
-			cout << "你死了。哀悼。\n";
-			cout << "你这一生不断与怪物搏杀，你的剑下有" << monsterKilled << "个亡魂\n\n";
-			cout << "没有回溯功能，所以只能重新开始了\n";
+			cout << "你死了。哀悼。\n"; //You are dead. Condolences.
+			cout << "你这一生不断与怪物搏杀，你的剑下有" << monsterKilled << "个亡魂\n\n"; //"You have been fighting monsters all your life, and there is a soul under your sword" "A dead soul"
+			cout << "没有回溯功能，所以只能重新开始了\n"; //"There is no backtracking function, so we can only start over"
 			system("pause");
 			exit(0);
 		}else if(hp > maxhp){
@@ -143,7 +143,7 @@ public:
 	}
 
 	// Modifier
-	// 返回被卸下的武器
+	// 返回被卸下的武器 //Return the unloaded weapon
 	Weapon *equipWeapon(Weapon *w){
 		Weapon *tmp = weaponEquip;
 		weaponEquip = w;
@@ -166,11 +166,11 @@ public:
 
 	void showStats() const;
 
-	// 返回被卸下的物品
+	// 返回被卸下的物品 //Return unloaded items
 	Item *equip(Item *item);
 
 	bool addHP(Item *item){
-		if(item->getType() == "食物"){
+		if(item->getType() == "食物"){ //food
 			Food *food = reinterpret_cast<Food *>(item);
 			changeHp(food->getAddhp());
 			return 0;
@@ -191,7 +191,7 @@ public:
 	int useSkill(int i);
 
 	inline void displayHP(){
-		std::cout << "你的生命值: " << hp << endl;
+		std::cout << "你的生命值: " << hp << endl; //Your health:
 	}
 
 	inline void addSkillUsed(int i){
