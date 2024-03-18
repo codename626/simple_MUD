@@ -6,8 +6,8 @@
 vector<int> v(4);
 Armor noArmor;
 Weapon noWeapon(v);
-Skill heal("暂时休眠", 0);
-Skill rage("怒吼", 1);
+Skill heal("暂时休眠", 0); //temporarily dormant
+Skill rage("怒吼", 1); // roar
 
 Character::Character()
 {
