@@ -11,7 +11,7 @@ private:
     // std::string armorType;
 
 public:
-    Food(int addhp = 0, std::string name = "NONE", std::string description = "NONE", std::string type = "食物", int level = 0, int buyValue = 0, int sellValue = 0, int rarity = 0);
+    Food(int addhp = 0, std::string name = "NONE", std::string description = "NONE", std::string type = "食物", int level = 0, int buyValue = 0, int sellValue = 0, int rarity = 0); //food
     virtual ~Food();
 
     int getAddhp() const {
