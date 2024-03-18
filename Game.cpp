@@ -175,14 +175,14 @@ void Game::play(){
 
     // name, hp, damage, defence, exp, money, propmt
     Trader t0(&p1, "恺神", 10000, 10000, 10000, 10000, 10000, "听其他人说他是个语言大师，不论从哪个角度来说。"); //Kai Shen I heard other people say that he is a master of language, no matter from which point of view
-    Trader t1(&p1, "刘老板", 100, 30, 20, 700, 500, "感觉他英语不太好的样子。");
-    Trader t2(&p1, "邱总", 80, 40, 14, 600, 700, "他看上去贼眉鼠眼的，眼神中总有一抹贪婪。");
-	Trader t3(&p1, "旅店老板娘", 80, 40, 14, 600, 700, "老板娘，麻烦给我一个好房间。");
-	NPC boss(&p1, "首领", 1000, 100, 100, 1000, 2000, "别碰它。");
+    Trader t1(&p1, "刘老板", 100, 30, 20, 700, 500, "感觉他英语不太好的样子。"); //"Boss Liu", "I feel like his English is not very good."
+    Trader t2(&p1, "邱总", 80, 40, 14, 600, 700, "他看上去贼眉鼠眼的，眼神中总有一抹贪婪。"); //"Mr. Qiu", "He looks snarky, and there is always a hint of greed in his eyes."
+	Trader t3(&p1, "旅店老板娘", 80, 40, 14, 600, 700, "老板娘，麻烦给我一个好房间。"); //Hotel proprietress", "Hotel proprietress, please give me a good room."
+	NPC boss(&p1, "首领", 1000, 100, 100, 1000, 2000, "别碰它。"); //"Chief", 1000, 100, 100, 1000, 2000, "Don't touch it."
 
-	// NPC n1("小弟A", 15, 4, 0, 30, 30, "如名字般毫无特点。", p1);
-    // NPC n2("小弟B", 15, 3, 1, 30, 30, "如名字般毫无特点。", p1);
-    // NPC n3("小弟C", 15, 2, 1, 30, 25, "如名字般毫无特点。", p1);
+	// NPC n1("小弟A", 15, 4, 0, 30, 30, "如名字般毫无特点。", p1); //"Brother A", "As meaningless as the name."
+    // NPC n2("小弟B", 15, 3, 1, 30, 30, "如名字般毫无特点。", p1); //"Brother B", "As meaningless as the name."
+    // NPC n3("小弟C", 15, 2, 1, 30, 25, "如名字般毫无特点。", p1); //"Little Brother C", "As meaningless as the name."
 
 
 	weaponStore.insertTrader(t1);
@@ -208,16 +208,16 @@ void Game::play(){
 
 	// name, description, type, level, buyValue, sellValue, rarity
 
-	// Food cookie(10, "饼干", "感觉已经变质了。", "食物", 1, 10, 5, 1);
-	// Food water(5, "纯净水", "谁知道纯不纯净。", "食物", 1, 10, 5, 1);
-	// Weapon blade1(5, 2, "破损的匕首", "似乎生锈了。", "武器", 1, 20, 10, 1);
-	// Weapon blade2(7, 3, "一般的匕首", "一般。", "武器", 2, 50, 30, 1);
-	// Weapon blade3(10, 5, "精良的匕首", "看上去不错。", "武器", 3, 100, 50, 1);
-	// Weapon blade4(12, 7, "优异的匕首", "刀尖熠熠闪光。", "武器", 4, 150, 80, 1);
-	// Armor jacket1(2, 4, "破损的夹克", "也就凑合吧。", "防具", 1, 20, 10, 1);
-	// Armor jacket4(8, 14, "优异的夹克", "真的很硬。", "防具", 4, 150, 80, 1);
-	// Armor cottonclothes1(1, 6, "破损的棉大衣", "防御时有点作用，进攻就完全不行了","防具", 1, 20, 10 ,1);
-	// Armor cottonclothes4(6, 17, "优异的棉大衣", "好重。","防具", 4, 150, 80 ,1);
+	// Food cookie(10, "饼干", "感觉已经变质了。", "食物", 1, 10, 5, 1); //"Cookies", "It feels like it's gone bad.", "Food",
+	// Food water(5, "纯净水", "谁知道纯不纯净。", "食物", 1, 10, 5, 1); //"Pure water", "Who knows whether it is pure or not.", "Food"
+	// Weapon blade1(5, 2, "破损的匕首", "似乎生锈了。", "武器", 1, 20, 10, 1); //"Broken dagger", "Appears to be rusty.", "Weapon"
+	// Weapon blade2(7, 3, "一般的匕首", "一般。", "武器", 2, 50, 30, 1); //"General dagger", "General.", "Weapon"
+	// Weapon blade3(10, 5, "精良的匕首", "看上去不错。", "武器", 3, 100, 50, 1); //"Excellent dagger", "Looks good.", "Weapon"
+	// Weapon blade4(12, 7, "优异的匕首", "刀尖熠熠闪光。", "武器", 4, 150, 80, 1); //"Excellent dagger", "The tip sparkles.", "Weapon"
+	// Armor jacket1(2, 4, "破损的夹克", "也就凑合吧。", "防具", 1, 20, 10, 1); // "Damaged jacket", "It's just okay.", "Armor"
+	// Armor jacket4(8, 14, "优异的夹克", "真的很硬。", "防具", 4, 150, 80, 1); // "Excellent jacket", "Really tough.", "Armor"
+	// Armor cottonclothes1(1, 6, "破损的棉大衣", "防御时有点作用，进攻就完全不行了","防具", 1, 20, 10 ,1); //"Damaged cotton coat", "It's somewhat useful for defense, but completely useless for offense", "Armor"
+	// Armor cottonclothes4(6, 17, "优异的棉大衣", "好重。","防具", 4, 150, 80 ,1); //"Excellent cotton coat", "So heavy.", "Armor"
 
 	// t0.insertSell(&blade4, 9);
 	// t0.insertSell(&cottonclothes4, 9);
@@ -236,14 +236,14 @@ void Game::play(){
 	// t2.insertDrop(&cookie, 6);
 	// t2.insertHelper(&n3);
 
-	cout << "初始化完成。\n";
+	cout << "初始化完成。\n"; //Initialization completed
 	cout << "-----------------------------------\n\n\n";
-	cout << "生存提示: " << endl;
-	cout << "0: 千万不要打除了数字以外的字符，不然游戏就炸了。" << endl;
-	cout << "1: 试炼是随机生成怪物的地方。如果你发现没有怪物生成，请选择更新NPC。" << endl;
-	cout << "1.5: 更新NPC也可以更新商人的物品。\n";
-	cout << "2: 食物可以回血。" << endl;
-	cout << "开心游玩!\n";
+	cout << "生存提示: " << endl; //Survival tips: 
+	cout << "0: 千万不要打除了数字以外的字符，不然游戏就炸了。" << endl; //0: Never type characters other than numbers, otherwise the game will crash.
+	cout << "1: 试炼是随机生成怪物的地方。如果你发现没有怪物生成，请选择更新NPC。" << endl; //1: Trial is a place where monsters are randomly generated. If you find that no monsters are generated, please choose to update NPC.
+	cout << "1.5: 更新NPC也可以更新商人的物品。\n"; //1.5: Updating NPCs can also update merchants' items.
+	cout << "2: 食物可以回血。" << endl; //2: Food can restore blood.
+	cout << "开心游玩!\n"; //"Have fun!"
 	cout << "-----------------\n\n\n";
 	// for (int i = 0; i < 10; i++){
 	// 	Armor tmp = createArmor(p1);
